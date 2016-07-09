@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Examples</title>
+	<script type="text/javascript">
+	
+	var msgText;
+	var x = 1;
+
+	//1. декларация на функция
+	function showMessage( n, message ){
+		if(typeof n != 'number' || n < 1 || n > 6 )
+		{
+			//window.alert('Недопустима стойност за n (' + n + ')');
+			console.log('Недопустима стойност за n (' + n + ')');
+			n = 3;
+		}
+
+		if( typeof message != 'string' || message === '')
+		{
+			console.log('Празно съобщение');
+			message = 'Empty Message';
+		}
+
+		document.write('<h' + n + '>' + message + '</h' + n + '>');
+
+	}
+	
+	//2. извикваме функцията
+	showMessage( 9, 'Успешна регистрация');
+	showMessage( 3, msgText );
+	showMessage( 4, 'Успешно добавихте продукт');
+
+	//---------------------------------------------------
+	//console.log('msgText:', typeof msgText );
+	//console.log('Number:', typeof x );
+	//console.log('showMessage:', typeof showMessage );
+    //----------------------------------------------------
+	</script>
+</head>
+<body>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias sint tempora possimus! Fuga, laudantium. Dignissimos, soluta error inventore adipisci earum, velit hic temporibus natus voluptate itaque vitae obcaecati repellat ut!</p>
+	<noscript>
+		Моля, да разрешите изпълнението на JS ....
+	</noscript>
+</body>
+</html>

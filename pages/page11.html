@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Examples</title>
+	<script>
+		
+		function show(func)
+		{
+			document.write('<div>');
+			func();
+			document.write('</div>');
+		}
+
+		show(function(){
+			document.write('Lorem ipsum dolor sit amet, consectetur adipisicing elit.');
+		});
+
+		show(function(){
+			document.write('<img src="../pics-large/pic1.jpg" alt="Picture 1" />');
+		});
+	</script>
+	<style>
+		p em{
+			
+		}
+	</style>
+</head>
+<body>
+
+	<noscript>
+		Моля, да разрешите изпълнението на JS ....
+	</noscript>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Examples</title>
+</head>
+<body>
+	<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h2>
+	
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium explicabo molestiae rerum <a href="http://dir.bg">quia maiores obcaecati</a> eum aliquam possimus earum totam ipsam, quis nostrum dicta quam sequi quisquam ipsum nisi eius.
+	</p>
+	
+	<div>Quam praesentium quae expedita! Iure voluptate esse aspernatur aperiam eaque quibusdam facilis, <a href="./page02.html">recusandae provident</a>, deserunt, ex dolor odit. Beatae quas vitae hic.</div>
+
+	<p>Delectus perspiciatis autem, quos iusto nisi voluptate in minus saepe numquam quibusdam magni <a href="http://btv.bg">ducimus sequi</a> adipisci quas, recusandae id veritatis harum temporibus itaque ab, necessitatibus fuga aut? Ipsam, deserunt, nam.
+	</p>
+	
+	<p>Impedit magni autem obcaecati id adipisci ipsa officia eveniet error, sequi? Odit at sequi vero atque veritatis, sed facilis, nisi commodi incidunt accusantium id, quidem sapiente? Nisi, obcaecati, animi! In.
+	</p>
+	<noscript>
+		Моля, да разрешите изпълнението на JS ....
+	</noscript>
+
+	<!-- неблокиращо включване -->
+	<!-- Ако е зададено свойството src, между етикетите НЕ трябва да има друг код -->
+	<script src="../js/jquery-3.0.0.min.js"></script>
+	
+	<script>
+	$(document).ready(function(){
+		console.log('document ready');
+		$('a[href^="http"]').css('text-decoration','none');
+
+	});//document ready
+	</script>
+</body>
+</html>

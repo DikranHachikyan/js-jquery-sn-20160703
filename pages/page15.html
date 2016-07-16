@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Examples</title>
+	<style>
+		ul{
+			list-style: none;
+		}
+		li a{
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="Click Me" id="btn" >
+	<br>
+	<label>
+		<input type="checkbox" id="cb">I agree ...
+	</label>
+	<br>
+	<a href="http://dir.bg" id="lnk">Dir bg</a>
+	<noscript>
+		Моля, да разрешите изпълнението на JS ....
+	</noscript>
+
+	<!-- неблокиращо включване -->
+	<!-- Ако е зададено свойството src, между етикетите НЕ трябва да има друг код -->
+	<script src="../js/jquery-3.0.0.min.js"></script>
+	
+	<script>
+	$(document).ready(function(){
+		console.log('document ready');
+		
+		$('#btn').on('click', function(evt){
+			window.alert('Click Event')
+		});//on btn click
+
+		$('#cb').change(function(evt){
+			window.alert('Change Event');
+		});//on cb change
+
+		$('#lnk').click(function(evt){
+			evt.preventDefault();
+			$('body').prepend('<p>Hello jQuery</p>');
+		}); //on lnk click
+	});//document ready
+	</script>
+</body>
+</html>

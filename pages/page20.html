@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Examples</title>
+	<style>
+		ul{
+			list-style: none;
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<h2>Галерия</h2>
+	<div id="show">
+		<img src="../pics-large/pic1.jpg" alt="City Center">
+	</div>
+	<ul id="gallery">
+		<li><img src="../pics-small/pic1.jpg" alt="City Center"></li>
+		<li><img src="../pics-small/pic2.jpg" alt="Millennium Monument"></li>
+		<li><img src="../pics-small/pic3.jpg" alt="City Attractions"></li>
+		<li><img src="../pics-small/pic4.jpg" alt="Avon River"></li>
+	</ul>
+	
+	<noscript>
+		Моля, да разрешите изпълнението на JS ....
+	</noscript>
+
+	<!-- неблокиращо включване -->
+	<!-- Ако е зададено свойството src, между етикетите НЕ трябва да има друг код -->
+	<script src="../js/jquery-3.0.0.min.js"></script>
+	
+	<script>
+	$(document).ready(function(){
+		console.log('document ready');
+		var path = '../pics-large/';
+
+		$('#gallery li img').click( function(evt){
+			var imgSrc = $(this).attr('src');
+			var imgAlt = $(this).attr('alt');
+
+			var pos = imgSrc.lastIndexOf('/');
+			imgSrc = path + imgSrc.slice( pos );
+			 	
+			$('#show img').attr('src', imgSrc ).attr('alt', imgAlt);
+
+		}); //on click image ....
+	});//document ready
+	
+	</script>
+</body>
+</html>
